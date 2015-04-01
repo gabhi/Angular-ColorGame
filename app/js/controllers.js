@@ -13,7 +13,7 @@ function StroopGameCtrl($scope){
 	$scope.stopGame=function(){ 	
 		$scope.UI.showStartButton=true;
 		$scope.UI.showGameButton=false;
-		$scope.UI.countDownClass="badge alert-success";
+		$scope.UI.countDownClass="badge badge-success";
 		$scope.UI.wrongLength="";//length of green progress bar
 		$scope.UI.rightLength="";//length of red progress bar
 		$scope.UI.imgSrc="img/color.png";
@@ -29,7 +29,7 @@ function StroopGameCtrl($scope){
 	  $scope.resetGame=function(){ 
 		$scope.setNextProblem();
 		$scope.game.previousColor="";
-		$scope.UI.countDownClass="badge alert-success"
+		$scope.UI.countDownClass="badge badge-success"
 		$scope.UI.imgSrc="img/none.png";		
 		$scope.UI.showStartButton=false;
 		$scope.UI.showGameButton=true;
@@ -47,7 +47,7 @@ function StroopGameCtrl($scope){
 		   $scope.$apply(function(){
 				 $scope.game.countDown--;
 				if ($scope.game.countDown<10){
-					$scope.UI.countDownClass="badge progress-bar-danger";
+					$scope.UI.countDownClass="badge badge-important";
 				}
 				if ($scope.game.countDown==0){
 				 clearInterval(timer);
