@@ -38,6 +38,7 @@
         'into this app.';
         
         document.getElementById('login').innerHTML =' <fb:login-button scope="public_profile,email"  background="dark" onlogin="checkLoginState();"></fb:login-button>';
+    FB.XFBML.Host.parseDomTree();
 
     } else {
       // The person is not logged into Facebook, so we're not sure if
@@ -46,6 +47,7 @@
         'into Facebook.';
         
         document.getElementById('login').innerHTML =' <fb:login-button scope="public_profile,email"  background="dark" onlogin="checkLoginState();"></fb:login-button>';
+    FB.XFBML.Host.parseDomTree();
 
     }
   }
