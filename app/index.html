@@ -36,11 +36,15 @@
       // The person is logged into Facebook, but not your app.
       document.getElementById('status').innerHTML = 'Please log ' +
         'into this app.';
+                document.getElementById('logindisplay').style.visibility = 'block';
+
     } else {
       // The person is not logged into Facebook, so we're not sure if
       // they are logged into this app or not.
       document.getElementById('status').innerHTML = 'Please log ' +
         'into Facebook.';
+                        document.getElementById('logindisplay').style.visibility = 'block';
+
     }
   }
 
@@ -97,6 +101,8 @@
       console.log('Successful login for: ' + response.name);
       document.getElementById('status').innerHTML =
         'Thanks for logging in, ' + response.name + '!';
+        
+        document.getElementById('logindisplay').style.visibility = 'hidden';
     });
   }
 </script>
@@ -107,8 +113,15 @@
   the FB.login() function when clicked.
 -->
 
-<fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-</fb:login-button>
+
+<div id="logindisplay">
+    <span id="login">
+      <fb:login-button scope="public_profile,email"  background="dark" onlogin="checkLoginState();">
+      </fb:login-button>
+    </span>
+</div>
+
+ 
 
 <div id="status">
 </div>
