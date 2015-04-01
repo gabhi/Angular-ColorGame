@@ -37,8 +37,7 @@
       document.getElementById('status').innerHTML = 'Please log ' +
         'into this app.';
         
-        document.getElementById('login').innerHTML =' <fb:login-button scope="public_profile,email"  background="dark" onlogin="checkLoginState();">
-      </fb:login-button>';
+        document.getElementById('login').innerHTML =' <fb:login-button scope="public_profile,email"  background="dark" onlogin="checkLoginState();"></fb:login-button>';
 
     } else {
       // The person is not logged into Facebook, so we're not sure if
@@ -46,8 +45,7 @@
       document.getElementById('status').innerHTML = 'Please log ' +
         'into Facebook.';
         
-        document.getElementById('login').innerHTML =' <fb:login-button scope="public_profile,email"  background="dark" onlogin="checkLoginState();">
-      </fb:login-button>';
+        document.getElementById('login').innerHTML =' <fb:login-button scope="public_profile,email"  background="dark" onlogin="checkLoginState();"></fb:login-button>';
 
     }
   }
