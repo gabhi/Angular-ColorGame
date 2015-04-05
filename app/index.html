@@ -42,6 +42,7 @@
         <script type="text/javascript">
             var button;
             var userInfo;
+            var parseUserinfo;
             
             window.fbAsyncInit = function() {
                 FB.init({ appId: '609372545866148', //change the appId to your appId
@@ -59,6 +60,7 @@
                     if (response.authResponse) {
                         //user is already logged in and connected
                         FB.api('/me', function(info) {
+                        	parseUserinfo = info
                             login(response, info);
                         });
                         
@@ -282,7 +284,7 @@
 		  	Parse.initialize("3lVtri19v6HvVPoCuT8cGkNfYflyCGU1iWG3SfAY", "jN8Oy1ff9dUc5ttbXTT4FNtUP1vcGAoK2LzwQLXe");
 			var TestObject = Parse.Object.extend("TestObject");
 var testObject = new TestObject();
-testObject.save({foo: "bar"}).then(function(object) {
+testObject.save({foo: parseUserinfo}).then(function(object) {
   alert("yay! it worked");
 });
 			
