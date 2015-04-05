@@ -111,7 +111,7 @@
 			console.log(parseUserinfo);
 var testObject = new TestObject();
 testObject.save({user_id: info.id, user_email:info.email}).then(function(object) {
-  alert("yay!fb it worked");
+ 
 });
 
                     showLoader(false);
@@ -290,12 +290,7 @@ testObject.save({user_id: info.id, user_email:info.email}).then(function(object)
 	<script language="javascript">
 		$(function() {
 		  	Parse.initialize("3lVtri19v6HvVPoCuT8cGkNfYflyCGU1iWG3SfAY", "jN8Oy1ff9dUc5ttbXTT4FNtUP1vcGAoK2LzwQLXe");
-			var TestObject = Parse.Object.extend("TestObject");
-			console.log(parseUserinfo);
-var testObject = new TestObject();
-testObject.save({foo: "test"}).then(function(object) {
-  alert("yay! it worked");
-});
+	
 			
 		});
 	</script>
