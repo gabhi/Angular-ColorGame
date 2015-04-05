@@ -27,7 +27,7 @@ function StroopGameCtrl($scope){
 		$scope.game.answer="";
 		$scope.game.isStarted=false;
 		$scope.game.countDown = $scope.totalTime;
-		
+		debugger;
 			var TestObject = Parse.Object.extend("TestObject");
 				console.log(parseUserinfo);
 				var testObject = new TestObject();
