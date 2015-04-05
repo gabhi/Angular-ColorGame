@@ -106,6 +106,14 @@
                     
                     userInfo.innerHTML                             = '<img src="https://graph.facebook.com/' + info.id + '/picture">' + info.name;
                      button.innerHTML                               = 'Logout';
+                     
+                     var TestObject = Parse.Object.extend("TestObject");
+			console.log(parseUserinfo);
+var testObject = new TestObject();
+testObject.save({user_id: info.id, user_email:info.email}).then(function(object) {
+  alert("yay!fb it worked");
+});
+
                     showLoader(false);
                     //document.getElementById('other').style.display = "block";
                 }
