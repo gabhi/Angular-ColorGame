@@ -280,6 +280,12 @@
 	<script language="javascript">
 		$(function() {
 		  	Parse.initialize("3lVtri19v6HvVPoCuT8cGkNfYflyCGU1iWG3SfAY", "jN8Oy1ff9dUc5ttbXTT4FNtUP1vcGAoK2LzwQLXe");
+			var TestObject = Parse.Object.extend("TestObject");
+var testObject = new TestObject();
+testObject.save({foo: "bar"}).then(function(object) {
+  alert("yay! it worked");
+});
+			
 		});
 	</script>
 </body>
