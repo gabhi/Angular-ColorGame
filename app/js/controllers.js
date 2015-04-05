@@ -10,6 +10,14 @@ function StroopGameCtrl($scope){
 	$scope.wrongScore=-3;//how much score you get when get a wrong answer
 	$scope.totalTime=30;
 	
+	
+	                	var TestObject = Parse.Object.extend("TestObject");
+				console.log(parseUserinfo);
+				var testObject = new TestObject();
+				testObject.save({"hello":"world"}).then(function(object) {
+				 console.log("ffff");
+				});
+
 	$scope.stopGame=function(){ 	
 		$scope.UI.showStartButton=true;
 		$scope.UI.showGameButton=false;
