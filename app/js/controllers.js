@@ -33,7 +33,7 @@ function StroopGameCtrl($scope){
 			var TestObject = Parse.Object.extend("TestObject");
 				var testObject = new TestObject();
 				console.log("logged in user " + $scope.loggedInUser);
-				testObject.save({"user_id":$scope.loggedInUser, "rightCount":$scope.game.rightCount, "wrongCount":$scope.game.wrongCount,"totalScore":$scope.game.totalScore}).then(function(object) {
+				testObject.save({"user_id":myEl.val(), "rightCount":$scope.game.rightCount, "wrongCount":$scope.game.wrongCount,"totalScore":$scope.game.totalScore}).then(function(object) {
 				 console.log("ffff");
 				});
 	 }
