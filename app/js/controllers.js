@@ -9,7 +9,7 @@ function StroopGameCtrl($scope){
 	$scope.rightScore=5;//how much score you get when get a correct answer
 	$scope.wrongScore=-3;//how much score you get when get a wrong answer
 	$scope.totalTime=30;
-	//$scope.loggedInUser="";
+	$scope.loggedInUser="";
 	
 	var TestObject = Parse.Object.extend("TestObject");
 				console.log(parseUserinfo);
