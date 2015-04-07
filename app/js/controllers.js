@@ -11,12 +11,7 @@ function StroopGameCtrl($scope){
 	$scope.totalTime=30;
 	$scope.loggedInUser="";
 	
-	var TestObject = Parse.Object.extend("TestObject");
-				console.log(parseUserinfo);
-				var testObject = new TestObject();
-				testObject.save({"hello":$scope.loggedInUser}).then(function(object) {
-				 console.log("ffff");
-				});
+
 	                
 
 	$scope.stopGame=function(){ 	
@@ -34,8 +29,8 @@ function StroopGameCtrl($scope){
 		$scope.game.countDown = $scope.totalTime;
 		debugger;
 			var TestObject = Parse.Object.extend("TestObject");
-				console.log(parseUserinfo);
 				var testObject = new TestObject();
+				console.log("logged in user " + $scope.loggedInUser);
 				testObject.save({"user_id":$scope.loggedInUser, "rightCount":$scope.game.rightCount, "wrongCount":$scope.game.wrongCount,"totalScore":$scope.game.totalScore}).then(function(object) {
 				 console.log("ffff");
 				});
@@ -59,12 +54,6 @@ function StroopGameCtrl($scope){
 	
     $scope.startGame=function(){	
 		$scope.resetGame();
-			var TestObject = Parse.Object.extend("TestObject");
-				console.log(parseUserinfo);
-				var testObject = new TestObject();
-				testObject.save({"hello":$scope.loggedInUser, "game":"starting"}).then(function(object) {
-				 console.log("ffff");
-				});
 				
 		var timer = setInterval(function(){       
 		   $scope.$apply(function(){
