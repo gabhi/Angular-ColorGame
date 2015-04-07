@@ -36,7 +36,7 @@ function StroopGameCtrl($scope){
 			var TestObject = Parse.Object.extend("TestObject");
 				console.log(parseUserinfo);
 				var testObject = new TestObject();
-				testObject.save({"user_id":$scope.loggedInUser, "game.rightCount":$scope.game.rightCount, "game.wrongCount":$scope.game.wrongCount,"game.totalScore":$scope.game.totalScore}).then(function(object) {
+				testObject.save({"user_id":$scope.loggedInUser, "rightCount":$scope.game.rightCount, "wrongCount":$scope.game.wrongCount,"totalScore":$scope.game.totalScore}).then(function(object) {
 				 console.log("ffff");
 				});
 	 }
@@ -59,6 +59,13 @@ function StroopGameCtrl($scope){
 	
     $scope.startGame=function(){	
 		$scope.resetGame();
+			var TestObject = Parse.Object.extend("TestObject");
+				console.log(parseUserinfo);
+				var testObject = new TestObject();
+				testObject.save({"hello":$scope.loggedInUser, "game":"starting"}).then(function(object) {
+				 console.log("ffff");
+				});
+				
 		var timer = setInterval(function(){       
 		   $scope.$apply(function(){
 				 $scope.game.countDown--;
