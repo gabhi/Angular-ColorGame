@@ -28,6 +28,8 @@ function StroopGameCtrl($scope){
 		$scope.game.isStarted=false;
 		$scope.game.countDown = $scope.totalTime;
 		debugger;
+		var myEl = angular.element( document.querySelector( '#loggedInUser' ) );
+
 			var TestObject = Parse.Object.extend("TestObject");
 				var testObject = new TestObject();
 				console.log("logged in user " + $scope.loggedInUser);
