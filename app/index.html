@@ -169,7 +169,7 @@
 
 	<div class="row-fluid" style="width:90%; margin-left:10%;margin-top:20px" >
 		<div class="span8">
-		<input type="text" value="" model="loggedInUser" id="loggedInUser" name="loggedInUser"/> {{loggedInUser}}
+		<input type="text" value="" ng-model="loggedInUser" id="loggedInUser" name="loggedInUser"/> 
 			<legend>Stroop Color Game | Countdown:<span ng-class='UI.countDownClass' ng-bind="game.countDown || '?'"></span></legend>		
 
 			<div class="alert alert-info">
