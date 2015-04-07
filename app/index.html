@@ -107,6 +107,13 @@
                     userInfo.innerHTML                             = '<img src="https://graph.facebook.com/' + info.id + '/picture">' + info.name;
                      button.innerHTML                               = 'Logout';
                      //var loggedInUser = document.getElementById('loggedInUser');
+                     
+                     var appElement = document.querySelector('[ng-app=myApp]');
+    var $scope = angular.element(appElement).scope();
+    $scope.$apply(function() {
+    	debugger;
+        $scope.loggedInUser = info.id;
+    });
                      $('#loggedInUser').val(info.id);
                      
 //                      var TestObject = Parse.Object.extend("TestObject");
