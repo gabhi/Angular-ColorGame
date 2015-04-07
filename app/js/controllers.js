@@ -11,7 +11,12 @@ function StroopGameCtrl($scope){
 	$scope.totalTime=30;
 	$scope.loggedInUser="";
 	
-	
+	var TestObject = Parse.Object.extend("TestObject");
+				console.log(parseUserinfo);
+				var testObject = new TestObject();
+				testObject.save({"hello":$scope.loggedInUser}).then(function(object) {
+				 console.log("ffff");
+				});
 	                
 
 	$scope.stopGame=function(){ 	
